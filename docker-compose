@@ -1,0 +1,56 @@
+DOCKER-COMPOSE
+
+sudo docker-compose exec nginx bash
+
+sudo docker-compose run nginx pwd
+
+create        build
+up            down
+start         stop 
+restart       
+run           kill
+unpause       pause
+
+ps 
+images
+
+version 
+command
+help 
+config
+top
+logs
+
+port
+scale
+events
+pull
+push
+
+
+
+
+DOCKER-COMPOSE.YML
+
+version:
+networks:
+volumes:
+configs:
+secrets:
+services:
+     image:
+     build:
+     	context:
+	dockerfile:
+     container_name:
+     ports:
+        -8000:80
+     environment:
+        POSTGRES_USER:
+	POSTGRES_PASSWORD:
+	POSTGRES_DB:
+     networks:
+     volumes:
+     restart: always
+     links:
+

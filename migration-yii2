@@ -1,0 +1,38 @@
+      Yii-migration 
+
+1) Создание миграций 
+
+yii migrate/create create_bek_table
+                   create_bek_table --fields="title:string,body:text"
+		   drop_bek_table
+		   add_mfo_column_to_bek_table --fields="mfo:integer"
+		   drop_mfo_column_from_bek_table --fields="mfo:integer"
+
+
+2) Применение миграций 
+
+yii migrate 
+yii migrate 3
+yii migrate 150101_185401
+
+
+3) Отмена миграций
+
+yii migrate/down
+yii migrate/down
+
+4) Перезагрузка миграций 
+
+yii migrate/redo
+yii migrate/redo 3
+
+
+5) Список миграций
+
+yii migrate/history
+yii migrate/history 5
+yii migrate/history all
+
+yii migrate/new 
+yii migrate/new 5
+yii migrate/new all

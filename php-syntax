@@ -1,0 +1,167 @@
+Инструкция  (statement) 
+Выражение 
+
+
+
+<?php    ?>
+
+namespace
+
+use
+
+require_once
+
+
+
+//
+
+/*
+*
+*
+*
+*/
+
+
+/n
+
+print_r('Hello World!');
+echo "Hello World!";
+
+
+$
+
+const
+
+
+function 
+return 
+
+
+          
+if         
+elseif     
+else
+
+
+switch 
+case
+default
+break
+
+
+while
+
+for
+
+foreach
+
+
+*      <        &&
+
+/      <=       ||
+
++      >        !
+
+-      >=
+
+%      === 
+
+**     !==
+
+
+Конкатенация 
+Интерполяция
+Heredoc
+
+
+Типы данных:
+
+четыре скалярных типа:
+
+bool
+int
+float   (double)
+string
+
+четыре смешанных типа:
+
+array
+object
+callable
+iterable
+
+два специальных типа:
+
+resource
+NULL
+
+
+
+Именование
+
+CamelCase
+lowerCamelCase
+
+
+Синтаксический сахар
+
+$a = $a + 1         $a += 1
+$b = $b - 1         $b -= 1
+
+
+
+Инкремент
+
+$x = 5;
+
+префикс
+echo ++$x;   //=>   6
+echo   $x;   //=>   6
+
+постфикс
+echo $x++;   //=>   6
+echo $x;     //=>   7
+
+
+
+Декремент
+
+$x = 5;
+
+префикс
+echo --$x;   //=> 4
+echo   $x;   //=> 4
+
+постфикс
+echo $x--;   //=> 4
+echo $x;     //=> 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+class
+extends
+              
+    (((access)))
+public       (everywhere)
+protected    (child classes)
+private      (only in the class)
+
+$this
+self
+parent
+static
+
+static
+Значение первое — статическая локальная переменная
+Значение второе — статические свойства и методы классов
+Значение третье — позднее статическое связывание

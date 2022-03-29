@@ -1,0 +1,84 @@
+      Vimium
+      
+      
+     gg
+     
+     u
+     
+     j
+
+H h     l L
+
+     k
+     
+     d
+     
+     G
+     
+     
+    
+f   (open a link in the current tab)
+F   (open a link in a new tab)
+r   (reload)
+gs  (view source)
+i   (enter insert mod, hit esc to exit)
+yy  (copy the current url to the clipboard)
+yf  (copy a link to the clipboard)
+gf  (cycle forward to the clipboard)
+gF  (focus the main / top frame)
+?   (show the help dialog for a list of all avialable keys)
+
+Navigating to new pages:
+
+o   (open url, bookmark, or history entry
+O   (open url, bookmark, history entry in a new tab)
+b   (open bookmark)
+B   (open bookmark in a new tab)
+
+Using find:
+
+/   (enter find mode)
+n   (cycle forward to the next find match)
+N   (cycle backward to the previous find match)
+
+Navigating your history:
+
+H   (go back in history)
+L   (go forward in history)
+
+Manipulating tabs:
+
+J,gT   (go one tab left)
+K,gt   (go one tab right)
+g0     (go to the first tab)
+g$     (go to the last tab)
+^      (visit the previously-visited tab)
+t      (create tab)
+yt     (duplicate current tab)
+x      (close current tab)
+X      (restore closed tab)
+T      (search through your open tabs)
+W      (move current tab to new window)
+p      (поиск инф.буфере тек.вкладке)
+P      (поиск инф.буфере нов.владке)
+
+Additional advanced browsing commands:
+
+gu    (go up one level in the url hierarchy)
+gU    (go up to root of the url hierarchy)
+ge    (edit the current url)
+gE    (edit the current url and open in a new tab)
+v     (enter visual mode)
+V     (enter visual line mode)
+
+
+MODE
+
+
+i    insert mode 
+
+/    find mode 
+
+v    visual mode 
+
+V    visual line mode 

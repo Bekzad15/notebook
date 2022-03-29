@@ -1,0 +1,34 @@
+Controller   extends  yii\web\Controller
+
+Model        extends  yii\base\Model
+             extends  yii\db\ActiveRecord
+
+Migration    extends  yii\db\Migration
+
+Widget       extends  yii\base\Widget
+
+
+
+
+phpstorm 
+
+оранжевый     php
+фиолетовый    value, constant
+желтый        method
+белый         code
+зеленый       document, string
+черный        comment
+
+
+
+
+1) entry scripts
+2) applications
+3) applications components
+4) modules
+5) controllers
+6) filters
+7) models
+8) forms
+9) views
+10) widgets

@@ -1,0 +1,151 @@
+                                                    Состояния Git:
+
+1) modified     (изменён)
+
+2) staged       (индексирован)
+
+3) committed    (зафиксирован)
+ 
+
+
+
+Untracked:
+
+Tracked:
+
+-unmodified
+
+-modified
+
+-staged 
+
+
+
+Базовый подход в работе с Git выглядит так:
+
+1) Изменяете файлы вашей рабочей копии.
+
+2) Выборочно добавляете в индекс только те изменения, которые должны попасть в следующий коммит,
+   добавляя тем самым снимки только этих изменений в индекс.
+
+3) Когда вы делаете каммит, используются файлы из индекса как есть, и этот снимок сохраняется в ваш каталог Git.
+
+
+1) Кланирование на аккаунт github (fork)
+2) Кланирование на компьютер
+3) Изменит код
+4) Залит на аккаунт github
+5) Делать pull request
+
+
+
+
+                                                 Установка Git:
+
+sudo apt update
+sudo apt install git-all
+git --version 
+
+git config --global user.name 'bekzad'
+git config --global user.email 'yangibaevbekzad@gmail.com'
+
+
+                                                 Рабочий процесс:
+
+$mkdir hexlet-project
+$cd    hexlet-project
+hexlet-project$ git init 
+hexlet-project$ git status 
+hexlet-project$ echo "Hello World!" > README.php
+hexlet-project$ echo "Hello World!" > PEOPLE.php
+hexlet-project$ git add README.php
+hexlet-project$ git commit -m "add README.php"
+
+
+                                                  Интеграция с Github:
+
+hexlet-project$ git branch -M main 
+hexlet-project$ git remote add origin git@github.com: Bekzad15/hexlet-project.git 
+hexlet-project$ git push -u origin main
+
+                                                  Клонирование:
+
+git clone git@github.com:Bekzad15/hexlet-project.git 
+
+                                                  Получение изменений с Github:
+
+git pull --rebase 
+
+                                                  Анализ сделанных изменений:
+
+git status
+git diff
+git diff --staged
+
+                                                  Анализ истории изменений (коммитов)
+
+git log
+git log -p
+git show 5120bea3
+git blame путь-до-файла
+git grep строка
+git grep -i строка
+git grep Hexlet 5120bea3
+git rev-list --all
+
+                                                 Отмена изменений в рабочей директории (откат индексов):
+
+git clean -fd
+git restore INFO.php
+git restore --staged INFO.php
+ 
+                                                 Отмена коммитов:
+
+git revert 
+git revert --hard HEAD~
+git commit --amend 
+git commit --amend --no-edit 
+
+                                                 Перемещение по истории:
+
+git log --oneline 
+git checkout хеш-коммита
+git checkout main
+git branch
+git switch
+
+                                                Понимание Git:
+
+git log --graph
+git reset --hard HEAD~1
+git checkout 
+git branch 
+git merge
+git rebase 
+git reset 
+git cherry-pick
+
+
+                                                Игнорирование файлов:
+
+.gitignore
+
+                                                Stash:
+
+git stash 
+git stash pop 
+git stash push
+git stash list
+git stash apply
+git stash apply --index
+git stash drop
+git stash --keep-index
+git stash --include-untracked
+git stash --patch
+git stash branch
+git stash -all
+git clean 
+git clean -x -i
+
+
+

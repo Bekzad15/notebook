@@ -1,0 +1,29 @@
+                             apt install :
+                   
+      
+1) ubuntu-restricted-extras
+2) git
+3) tmux
+4) neovim
+5) xsel
+6) phpstorm
+7) dbeaver-ce
+8) telegram-desktop
+9) yandex
+10) kerio-control-vpnclient-9.2.7-2921-linux-amd64.deb
+11) curl
+12) php7.3
+13) composer
+14) php7.3-soap 
+15) php7.3-curl
+16) php7.3-geoip
+17) php7.3-intl
+18) php7.3-gd
+19) php7.3-simplexml
+20) php7.3-mbstring
+21) php7.3-zip
+22) apt-transport-https 
+23) docker-ce
+24) docker-compose
+25) postgresql
+

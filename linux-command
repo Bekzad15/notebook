@@ -1,0 +1,131 @@
+     LINUX
+     
+pwd 
+
+cd 
+
+ls
+
+rm 
+
+cp 
+
+mv
+
+touch
+
+mkdir
+
+rmdir
+
+cat
+
+apt 
+
+man
+
+clear
+
+
+
+1) Навигация по файловой системе
+
+pwd
+cd
+
+2) Работа с файлами и каталогами 
+
+ls
+file
+touch
+mkdir
+rmdir
+ln 
+rm 
+cp
+mv
+tar
+zip
+unzip
+find
+df
+du
+
+3) Владение файлами и права доступа 
+
+chmod
+chown
+sudo
+
+4) Управление пользователями и группами 
+
+uname
+useradd
+passwd
+userdel
+groupadd
+groupdel
+usermod
+
+5) Управление процессами
+
+top 
+kill
+
+6) Работа с сетью 
+ 
+ping
+wget
+hostname
+
+7) Работа с текстом
+
+head
+tail
+diff
+grep
+echo
+cat
+
+8) Установка и удаления пакетов 
+
+apt 
+dnf
+
+9) Справка
+
+man
+history
+whereis
+clear
+
+
+26 комманд в Linux, которые должен знать каждый сисадмин 
+
+1)   uname  
+2)   who
+3)   w
+4)   ls
+5)   tar
+6)   rsync
+7)   find
+8)   locate
+9)   systemctl
+10)  journalctl
+11)  kill
+12)  killall
+13)  curl
+14)  tail
+15)  cat
+16)  grep
+17)  top
+18)  netstat
+19)  ip
+20)  lsof
+21)  df
+22)  du
+23)  id
+24)  chmod
+25)  sestatus
+26)  history
+
