@@ -14,14 +14,31 @@ phpstorm
 
 
 
-1) entry scripts
-2) applications
-3) applications components
-4) modules
-5) controllers                     extends  yii\web\Controller
-6) filters
-7) models                          extends  yii\db\ActiveRecord
-8) forms                           extends  yii\base\Model
-9) migration                       extends  yii\db\Migration
-10) views
-11) widgets                        extends  yii\base\Widget
+1)  entry scripts                               index.php                yii
+2)  applications                       extends  yii\web\Application
+3)  applications components
+4)  modules                            extends  yii\base\Module
+5)  controllers                        extends  yii\web\Controller
+6)  filters                            extends  yii\base\ActionFilter   yii\filters
+7)  models                             extends  yii\db\ActiveRecord
+8)  database                           extends  yii\db\Connection
+9)  forms                              extends  yii\base\Model
+10) migration                          extends  yii\db\Migration
+11) views                                       yii\web\View             yii\helpers\Html    yii\helpers\HtmlPurifier  
+12) widgets                            extends  yii\base\Widget          yii\widgets\ActiveForm
+13) components                         extends  yii\base\Component       config/web.php
+14) properties                         extends  yii\base\BaseObject
+15) events                             extends  yii\base\Component       yii\base\Event
+16) behaviors                          extends  yii\base\Component       yii\base\Behavior
+17) configurations
+18) aliases
+19) service locator                    extends  yii\di\ServiceLocator
+20) dependency injection container              yii\di\Container
+21) assets                             extends  yii\web\AssetBundle
+22) sessions                                    yii\web\Session
+23) cookies                                     yii\web\Cookie
+24) logging                                     yii\log\Target
+validating input
+class autoloading
+implements
+helpers
