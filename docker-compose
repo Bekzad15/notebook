@@ -30,27 +30,8 @@ push
 
 
 
-DOCKER-COMPOSE.YML
+docker network ls                docker network rm 
+docker ps -a                     docker rm
+docker images                    docker rmi 
 
-version:
-networks:
-volumes:
-configs:
-secrets:
-services:
-     image:
-     build:
-     	context:
-	dockerfile:
-     container_name:
-     ports:
-        -8000:80
-     environment:
-        POSTGRES_USER:
-	POSTGRES_PASSWORD:
-	POSTGRES_DB:
-     networks:
-     volumes:
-     restart: always
-     links:
-
+                                

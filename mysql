@@ -1,0 +1,14 @@
+/etc/mysql/
+
+/var/lib/mysql/
+
+/var/log/mysql/
+
+
+
+/var/run/mysqld
+/var/log/upstart/mysql.log
+/etc/apparmor.d/abstractions/mysql
+/etc/apparmpr.d/cache/usr.sbin.mysqld
+
+

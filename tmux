@@ -29,9 +29,17 @@ Prefix = ctrl + space
 
 P = Prefix
 
+
+
+
 alt + jk    (окны переход)
 
 ctrl + hjkl  (панелы переход)
+
+P + (0-9)
+
+
+
 
 P + alt + hjkl  (изменить размер панелов)
 

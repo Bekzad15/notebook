@@ -1,0 +1,188 @@
+sudo ufw app list
+sudo ufw allow 'Nginx Full'
+sudo ufw status
+sudo ufw allow in 80/tcp
+
+/etc/nsswitch.conf
+
+/etc/hosts
+
+
+sudo chmod -R 775 basic
+sudo chgrp -R www-data basic
+sudo chown -R www-data ./basic
+sudo chown -R www-data:www-data ./basic
+
+sudo systemctl status nginx        # чтобы проверить работу службы
+sudo systemctl start nginx         # Чтобы запустить остановленный веб-сервер
+sudo systemctl stop nginx          # Чтобы остановить веб-сервер
+sudo systemctl restart nginx       # Чтобы остановить и снова запустить службу, введите
+sudo systemctl reload nginx        # Если вы просто вносите изменения в конфигурацию, во многих случаях Nginx может перезагружаться без                                          отключения соединений. Для этого введите
+sudo systemctl disable nginx       # По умолчанию Nginx настроен на автоматический запуск при загрузке сервера. Если вы не хотите этого, вы                                      можете отключить такое поведение с помощью следующей команды
+sudo systemctl enable nginx        # Чтобы перезагрузить службу для запуска во время загрузки, введите
+
+
+
+nginx -s stop      # быстрое завершение 
+         quit      # плавное завершение
+	 reload    # перезагрузка конфигурационного файла
+	 reopen    # переоткрытие лог-файлов
+     
+      -t           # тестирование конфиг файла после изменений
+      -v           # проверка версии
+	    
+/etc/nginx/                          # Все конфигурационные файлы сервера располагаются в этом каталоге
+
+/etc/nginx/sites-available/          # директория, в которой находятся файлы виртуальных блоков для каждого из сайтов, ссылка на них должна                                        быть в каталоге /etc/nginx/sites-enabled/
+                           
+/etc/nginx/sites-enabled/            # в данной папке находятся активные виртуальные блоки веб-сервера Nginx.
+
+/etc/nginx/snippets/                 # каталог, содержащий так называемые сниппеты, которые можно при необходимости подключать к основной 
+                                       конфигурации сервера Nginx.
+
+/var/log/nginx/                      # директория, которая содержит журналы событий работы Nginx.
+
+/usr/share/nginx/html/               # hosting файлы фреймворка
+
+/var/run/nginx.pid                   # pid nomer file 
+
+/usr/sbin/nginx                      # исходный файл nginx
+          nginx-debug                # исходный файл nginx-debug
+
+
+/etc/nginx/conf.d/
+                  default.conf   # конфигурационный файл domena
+
+
+/etc/nginx/  nginx.conf          # Главный конфигурационный файл Nginx
+             
+             scgi_params 
+             uwsgi_params
+             fastcgi_params 
+             mime.types 
+
+             win-utf
+             koi-utf 
+             naxsi_core.rules 
+             proxy_params    
+             naxsi.rules 
+	     koi-win
+
+Структура конфигурационного файла:
+
+main:
+
+   user www-data;
+   worker_processes 4;
+
+
+   events {
+       worker_connections  1024;
+   }
+
+
+   http {
+
+      server {
+
+           location {
+    	   }
+     	   
+      	   location {
+    	   }
+
+      }
+
+      server {
+           
+	   location {
+	   }
+
+      }
+
+   }
+
+
+
+
+NGINX.CONF:
+
+user  nginx;
+worker_processes  auto;
+
+error_log  /var/log/nginx/error.log notice;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+}
+
+
+
+
+
+DEFAULT.CONF:
+
+
+
+server {
+    listen       80;
+    server_name  yii-test.com www.yii-test.com;
+    root   /usr/share/nginx/html/basic/web;
+    index index.html index.htm index.php; 
+
+    access_log  /var/log/nginx/yii-test.com.access.log  main;
+    error_log  /var/log/nginx/yii-test.com.error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+
+    location ~ \.php$ {
+        fastcgi_pass   unix:/var/run/php/php7.3-fpm.sock;
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include        fastcgi_params;
+    }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+
+    error_page   500 502 503 504  /50x.html;
+
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+
+
+
+
+
+

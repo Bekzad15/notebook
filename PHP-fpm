@@ -1,0 +1,35 @@
+php -v 
+
+systemctl status php7.3-fpm.service 
+
+PHP-CLI
+PHP-CGI   (FastCGI) (php-fpm)
+PHP-GTK
+
+
+/etc/php/7.3/   fpm/                php.ini
+                                    php-fpm.conf
+		                    conf.d/
+		                    pool.d/ www.conf
+
+		apache2/            php.ini
+		                    conf.d/
+
+		cli/                php.ini
+		                    conf.d/
+
+		mods-avialable/
+
+
+
+/run/php/ php7.3-fpm.pid
+          php7.3-fpm.sock
+	  php-fpm.sock
+
+
+                                    (fastcgi_pass unix: /run/php/php7.3-fpm.sock)
+/etc/php/7.3/fpm/pool.d/www.conf    (listen: /run/php/php7.3-fpm.sock)
+
+/var/log/php7.3-fpm.log             log php-fpm
+
+/usr/bin/php7.3

@@ -148,4 +148,12 @@ git clean
 git clean -x -i
 
 
+1. Показать список удаленных источников:
 
+$ git remote -v
+
+
+2. Изменить адрес нужного удаленного источника:
+
+$ git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+$ git remote set-url --push origin https://github.com/USERNAME/REPOSITORY.git
