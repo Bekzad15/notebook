@@ -1,5 +1,21 @@
      LINUX
+
+/usr/bin/setxkbmap -option "ctrl:swapcaps"
+
+
+
+cat /etc/os-release
+
+lsb_release -a
+
+hostnamectl
+
+
+
+
      
+(ctrl - x) + (ctrl - e)    bash + vim
+
 pwd 
 
 cd 

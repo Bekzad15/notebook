@@ -1,5 +1,7 @@
 php -v 
 
+php -m
+
 systemctl status php7.3-fpm.service 
 
 PHP-CLI

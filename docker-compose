@@ -27,11 +27,16 @@ events
 pull
 push
 
+docker system df
+
+docker volume ls                 docker volume rm           docker volume prune
+docker network ls                docker network rm          docker network prune
+docker ps -a                     docker rm                  docker container prune       docker rm -f $(docker ps –aq)
+docker images                    docker rmi                 docker image rm $(docker image ls -q)
 
 
+docker image ls -f dangling=true
+docker image rm $(docker image ls -f dangling=true -q)
 
-docker network ls                docker network rm 
-docker ps -a                     docker rm
-docker images                    docker rmi 
 
-                                
+docker system prune
