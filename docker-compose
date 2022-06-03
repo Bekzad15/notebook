@@ -40,3 +40,5 @@ docker image rm $(docker image ls -f dangling=true -q)
 
 
 docker system prune
+
+docker system prune -a

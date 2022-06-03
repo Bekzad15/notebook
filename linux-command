@@ -2,6 +2,9 @@
 
 /usr/bin/setxkbmap -option "ctrl:swapcaps"
 
+set -o vi
+
+
 
 
 cat /etc/os-release
