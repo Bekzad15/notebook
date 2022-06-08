@@ -1,0 +1,32 @@
+sudo apt install
+sudo apt install -f
+sudo apt remove 
+sudo apt purge 
+sudo apt autoremove
+sudo apt -y autoremove --purge
+sudo apt autoclean
+sudo apt update && sudo apt upgrade
+sudo apt --fix-broken install
+
+
+snap list
+snap remove
+snap install
+
+
+dpkg -i
+dpkg -l | grep 
+
+
+
+
+systemctl status nginx
+sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
+sudo systemctl reload nginx
+sudo systemctl disable nginx
+sudo systemctl enable nginx
+
+
+

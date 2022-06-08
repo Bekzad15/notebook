@@ -1,0 +1,54 @@
+1) Settings
+    -Appearance
+         -Style (Dark)
+	 -Dock  (hidden)
+    -Mouse & Touchpad
+    -Online Accounts
+    -Displays
+         -Scale 150%
+	 -Fractional Scaling
+    -Keyboard 
+    -Region & Language
+
+2) Software & Updates
+3) Software Updater  (main server)
+4) sudo apt update && sudo apt full-upgrade
+5) sudo snap refresh
+6) Ubuntu Software  (telegram)
+7) Ubuntu Software  (Tweaks) 
+8) Firefox     (sign in)
+9) ssh-keygen -t rsa
+10) apt install Git
+11) apt install neovim
+12) apt install tmux
+13) apt install curl
+14) apt install xsel
+15) apt install ubuntu-restricted-extras
+16) apt install apt-transport-https
+17) update-alternatives --config editor
+18) ~/.bashrc
+    ~/.tmux.conf
+    ~/.config/nvim/init.vim
+19) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+
+20) chrome 
+21) yandex
+22) sudo snap install zoom-client
+23) Ubuntu Software  (Slack)
+
+24) sudo snap install phpstorm --classic
+25) sudo snap install dbeaver-ce
+26) sudo snap install insomnia
+27) sudo apt install sublime-merge 
+28) sudo apt install -y docker-ce
+29) curl docker-compose 
+
+30) sudo apt install nginx
+31) sudo apt install mysql-server
+32) sudo apt install postgresql
+33) sudo apt install redis-server
+34) sudo apt install php7.3 php7.3-fpm php7.3-pdo php7.3-mysql php7.3-soap php7.3-curl php7.3-geoip php7.3-intl php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
+35) sudo apt install php-cli unzip
+36) Composer
+
+37) Kerio VPN Client 9.2.7-2921 for Linux AMD64
