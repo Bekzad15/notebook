@@ -12,43 +12,62 @@
 
 2) Software & Updates
 3) Software Updater  (main server)
-4) sudo apt update && sudo apt full-upgrade
+4) sudo apt update && sudo apt upgrade
 5) sudo snap refresh
-6) Ubuntu Software  (telegram)
+6) sudo apt install telegram
 7) Ubuntu Software  (Tweaks) 
 8) Firefox     (sign in)
-9) ssh-keygen -t rsa
-10) apt install Git
-11) apt install neovim
-12) apt install tmux
-13) apt install curl
-14) apt install xsel
-15) apt install ubuntu-restricted-extras
-16) apt install apt-transport-https
-17) update-alternatives --config editor
+
+9)  sudo apt install git
+10) ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"
+11) eval "$(ssh-agent -s)"
+12) ssh-add ~/.ssh/id_rsa
+
+13) sudo apt install neovim
+14) sudo update-alternatives --config editor
+15) sudo apt install tmux
+16) sudo apt install curl
+17) sudo apt install xsel
+
 18) ~/.bashrc
     ~/.tmux.conf
     ~/.config/nvim/init.vim
 19) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
-20) chrome 
-21) yandex
-22) sudo snap install zoom-client
-23) Ubuntu Software  (Slack)
+20) xinput list
 
-24) sudo snap install phpstorm --classic
-25) sudo snap install dbeaver-ce
-26) sudo snap install insomnia
-27) sudo apt install sublime-merge 
-28) sudo apt install -y docker-ce
-29) curl docker-compose 
+    #!/bin/bash
+    xinput set-prop 11 "Device Enabled" 0
+    xinput set-prop 11 "Device Enabled" 1
 
-30) sudo apt install nginx
-31) sudo apt install mysql-server
-32) sudo apt install postgresql
-33) sudo apt install redis-server
-34) sudo apt install php7.3 php7.3-fpm php7.3-pdo php7.3-mysql php7.3-soap php7.3-curl php7.3-geoip php7.3-intl php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
-35) sudo apt install php-cli unzip
-36) Composer
+    .bashrc
+    echo $PATH
+    export PATH=$PATH:/home/bekzad/Public/scripts
 
-37) Kerio VPN Client 9.2.7-2921 for Linux AMD64
+21) sudo apt install ubuntu-restricted-extras
+22) sudo apt install apt-transport-https
+
+23) Chrome 
+24) Yandex 
+25) Zoom
+26) Slack
+
+27) sudo snap install phpstorm --classic
+28) sudo snap install dbeaver-ce
+29) sudo snap install insomnia
+30) sudo apt install sublime-merge 
+31) sudo apt install -y docker-ce
+32) curl docker-compose 
+
+33) sudo apt install nginx
+34) sudo apt install mysql-server
+35) sudo apt install postgresql
+36) sudo apt install redis-server
+37) sudo apt install php7.3 
+38) sudo apt install php7.3-fpm php7.3-pdo php7.3-mysql
+39) sudo apt install php7.3-soap php7.3-curl php7.3-geoip php7.3-intl
+40) sudo apt install php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
+38) sudo apt install php-cli unzip
+39) Composer
+
+40) Kerio VPN Client 9.2.7-2921 for Linux AMD64
