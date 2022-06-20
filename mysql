@@ -16,6 +16,12 @@
 
 
 
+docker MySQL
+
+MYSQL_ROOT_PASSWORD=112233
+MYSQL_DATABASE=db
+MYSQL_USER=atlogex
+MYSQL_PASSWORD=123456
 
 
 
@@ -31,37 +37,12 @@ sudo systemctl status mysql
 
 
 
+CONSOLE COMMAND MySQL:
 
 
 
-docker MySQL
-
-MYSQL_ROOT_PASSWORD=112233
-MYSQL_DATABASE=db
-MYSQL_USER=atlogex
-MYSQL_PASSWORD=123456
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console command MySQL:
-
-
-
-
+sudo mysql
 mysql -u имя_пользователя -p
-
 
 EXIT
 
@@ -82,8 +63,15 @@ USE [db name];
 CREATE DATABASE название_базы_данных;
 
 
+CREATE USER 'ibank_user'@'localhost' IDENTIFIED BY 'ibank_password';
+GRANT ALL PRIVILEGES ON ibank_database.* TO 'ibank_user'@'localhost';
 
 SHOW TABLES;
+SELECT user FROM user;
+
+
+SOURCE /home/bekzad/Downloads/Telegram Desktop/MySQL___ibank_localhost.sql       #базы данных
+
 
 
 
