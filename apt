@@ -28,11 +28,23 @@ sudo systemctl restart nginx
 sudo systemctl reload nginx
 sudo systemctl disable nginx
 sudo systemctl enable nginx
+service --status-all
 
 
 
 chmod 
-deluser
+chgrp
+chown
+groups
+id
+groupadd
 delgroup
-
+groupdel
+useradd 
+adduser
+deluser
+usermod
+sudo -i -u postgres
+su bekzad
+newgrp
 

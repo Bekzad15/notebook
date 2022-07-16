@@ -1,23 +1,20 @@
      LINUX
 
 /usr/bin/setxkbmap -option "ctrl:swapcaps"
-
 set -o vi
 
 
+sudo -i -u postgres 
+su bekzad
 
 
 cat /etc/os-release
-
 lsb_release -a
-
 hostnamectl
 
 
-
-
-     
 (ctrl - x) + (ctrl - e)    bash + vim
+
 
 pwd 
 
@@ -81,7 +78,7 @@ sudo
 uname
 useradd
 passwd
-userdel
+deluser
 groupadd
 groupdel
 usermod
@@ -116,6 +113,7 @@ dnf
 man
 history
 whereis
+type
 clear
 
 

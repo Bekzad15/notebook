@@ -63,11 +63,13 @@
 34) sudo apt install mysql-server
 35) sudo apt install postgresql
 36) sudo apt install redis-server
-37) sudo apt install php7.3 
+37) sudo apt install php7.3 php7.3-cli 
 38) sudo apt install php7.3-fpm php7.3-pdo php7.3-mysql
 39) sudo apt install php7.3-soap php7.3-curl php7.3-geoip php7.3-intl
 40) sudo apt install php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
-38) sudo apt install php-cli unzip
+38) sudo apt install unzip
 39) Composer
 
 40) Kerio VPN Client 9.2.7-2921 for Linux AMD64
+41) htop
+42) nmap

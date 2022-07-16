@@ -1,3 +1,25 @@
+Библиотеки:
+
+libmysql (Oracle)
+mysqlnd  (PHP)    default
+
+
+Расширения:
+
+mysql
+mysqli
+PDO
+ -pdo_mysql
+ -pdo_pgsql
+ 
+
+
+
+
+
+
+
+
 /etc/mysql/  my.cnf
 
 /var/lib/mysql/
@@ -46,32 +68,67 @@ mysql -u имя_пользователя -p
 
 EXIT
 
-
-
-
-SHOW DATABASES;
-
-
-
 SHOW STATUS;
 
 
+SHOW DATABASES;
 USE [db name];
 
+CREATE DATABASE название_базы_данных;   (ibank_database)
+DROP DATABASE имя_базы_даных
+
+Переименовать базу данных
+mysqldump -u root -p old_db > old_db.sql
+mysqladmin -u root -p create new_db
+mysql -u root -p new_db < old_db.sql
 
 
-CREATE DATABASE название_базы_данных;
+
+ALTER USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
 
 
-CREATE USER 'ibank_user'@'localhost' IDENTIFIED BY 'ibank_password';
-GRANT ALL PRIVILEGES ON ibank_database.* TO 'ibank_user'@'localhost';
+
+Вывести список пользователей:
+SELECT user FROM mysql.user;
+
+CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
+GRANT ALL PRIVILEGES ON database_ibank.* TO 'user_ibank'@'localhost';
+
+DROP USER 'ibank_user'@'localhost';
+
+
 
 SHOW TABLES;
-SELECT user FROM user;
+
+SHOW COLUMNS FROM user;
+SELECT id FROM user;
 
 
-SOURCE /home/bekzad/Downloads/Telegram Desktop/MySQL___ibank_localhost.sql       #базы данных
+SOURCE /home/bekzad/Downloads/Telegram Desktop/MySQL___ibank_localhost.sql       # импорт базы данных
 
+
+
+# просмотрите метод аутентификации для каждого из ваших пользователей MySQL с помощью следующей команды:
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+
+# Для изменения этой настройки
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+# применит внесённые изменения
+FLUSH PRIVILEGES;
+
+
+
+
+
+
+
+
+
+
+
+SHOW CREATE TABLE user;
+SHOW INDEX FROM user;
 
 
 
@@ -131,8 +188,8 @@ DROP DATABASE название_базы_данных;
 
 
 
-SELECT * FROM table _ name;
-
+SHOW COLUMNS FROM user;
+SELECT id FROM user;
 
 
 

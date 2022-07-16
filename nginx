@@ -145,19 +145,22 @@ http {
 
 DEFAULT.CONF:
 
-
-
 server {
     listen       80;
-    server_name  yii-test.com www.yii-test.com;
-    root   /usr/share/nginx/html/basic/web;
+    server_name  ibank-backend.com www.ibank-backend.com;
+    root   /home/bekzad/Public/ibank-backend/web/;
     index index.html index.htm index.php; 
 
-    access_log  /var/log/nginx/yii-test.com.access.log  main;
-    error_log  /var/log/nginx/yii-test.com.error.log;
+    access_log  /var/log/nginx/ibank-backend.access.log  main;
+    error_log  /var/log/nginx/ibank-backend.error.log;
+
+#    location / {
+#        try_files $uri $uri/ =404;
+#    }
+
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ /index.php$is_args$args;
     }
 
 
@@ -172,6 +175,35 @@ server {
         deny all;
     }
 
+    error_page   500 502 503 504  /50x.html;
+
+
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+}
+
+
+
+DEFAULT.CONF:
+
+
+server {
+    listen       80;
+    server_name  yii2-test.com www.yii2-test.com;
+
+    access_log  /var/log/nginx/yii2-test.access.log  main;
+    error_log  /var/log/nginx/yii2-test.error.log;
+
+
+
+         
+    location / {
+        proxy_pass       http://localhost:8000;
+        proxy_set_header Host      $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
 
     error_page   500 502 503 504  /50x.html;
 
@@ -180,7 +212,6 @@ server {
     }
 
 }
-
 
 
 
