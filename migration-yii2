@@ -3,10 +3,9 @@
 1) Создание миграций 
 
 yii migrate/create create_bek_table
-                   create_bek_table --fields="title:string,body:text"
 		   drop_bek_table
-		   add_mfo_column_to_bek_table --fields="mfo:integer"
-		   drop_mfo_column_from_bek_table --fields="mfo:integer"
+		   add_mfo_column_to_bek_table 
+		   drop_mfo_column_from_bek_table 
 
 
 2) Применение миграций 
@@ -36,3 +35,6 @@ yii migrate/history all
 yii migrate/new 
 yii migrate/new 5
 yii migrate/new all
+
+7) Справка по миграциям 
+yii help migrate

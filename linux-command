@@ -1,5 +1,7 @@
      LINUX
 
+sudo systemctl hibernate
+
 /usr/bin/setxkbmap -option "ctrl:swapcaps"
 set -o vi
 
