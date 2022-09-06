@@ -28,70 +28,67 @@
 	  -Google 
 	  -Microsoft
 
-9)  sudo apt install git
-10) ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"
-11) eval "$(ssh-agent -s)"
-12) ssh-add ~/.ssh/id_rsa
+10)  sudo apt install git
+11) ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"
+12) eval "$(ssh-agent -s)"
+13) ssh-add ~/.ssh/id_rsa
 
-13) sudo apt install neovim
-14) sudo update-alternatives --config editor
-15) sudo apt install tmux
-16) sudo apt install curl
-17) sudo apt install xsel
+14) sudo apt install neovim
+15) sudo update-alternatives --config editor
+16) sudo apt install tmux
+17) sudo apt install curl
+18) sudo apt install xsel
 
-18) ~/.bashrc
+19) ~/.bashrc
     ~/.tmux.conf
     ~/.config/nvim/init.vim
-19) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
+20) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
-20) swap
-21) hibernate
+21) swap
+22) hibernate
 
-22) sudo apt install chrome-gnome-shell
-23) extensions.gnome.org
+23) sudo apt install chrome-gnome-shell
+24) extensions.gnome.org
          -Extensions
 	 -Caffeine
-	 -Freon
+	 -Vitals
 	 
-24) sudo apt install flameshot
+25) sudo apt install flameshot
 
-20) xinput list
+26) touchpad-toggle
 
-    #!/bin/bash
-    xinput set-prop 11 "Device Enabled" 0
-    xinput set-prop 11 "Device Enabled" 1
-
-    .bashrc
     echo $PATH
     export PATH=$PATH:/home/bekzad/Public/scripts
 
-21) sudo apt install ubuntu-restricted-extras
-22) sudo apt install apt-transport-https
+27) sudo apt install ubuntu-restricted-extras
+28) sudo apt install apt-transport-https
 
-23) Chrome 
-24) Yandex 
-25) Zoom
-26) Slack
+29) Chrome 
+30) Yandex 
+31) Zoom
+32) Slack
 
-27) sudo snap install phpstorm --classic
-28) sudo snap install dbeaver-ce
-29) sudo snap install insomnia
-30) sudo apt install sublime-merge 
-31) sudo apt install -y docker-ce
-32) curl docker-compose 
 
-33) sudo apt install nginx
-34) sudo apt install mysql-server
-35) sudo apt install postgresql
-36) sudo apt install redis-server
-37) sudo apt install php7.3 php7.3-cli 
-38) sudo apt install php7.3-fpm php7.3-pdo php7.3-mysql
-39) sudo apt install php7.3-soap php7.3-curl php7.3-geoip php7.3-intl
-40) sudo apt install php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
-38) sudo apt install unzip
-39) Composer
+33) sudo apt install -y docker-ce
+34) curl docker-compose 
 
-40) Kerio VPN Client 9.2.7-2921 for Linux AMD64
-41) htop
-42) nmap
-7) Ubuntu Software  (Tweaks)
+35) sudo snap install phpstorm --classic
+36) sudo snap install insomnia
+37) sudo apt install sublime-merge 
+38) sudo snap install dbeaver-ce
+
+39) sudo apt install nginx
+40) sudo apt install mysql-server
+41) sudo apt install postgresql
+42) sudo apt install redis-server
+43) sudo apt install php7.3 php7.3-cli 
+    sudo apt install php7.3-fpm php7.3-pdo php7.3-mysql
+    sudo apt install php7.3-soap php7.3-curl php7.3-geoip php7.3-intl
+    sudo apt install php7.3-gd php7.3-simplexml php7.3-mbstring php7.3-zip php7.3-bcmath
+    sudo apt install unzip
+44) Composer
+
+45) Kerio VPN Client 9.2.7-2921 for Linux AMD64
+46) Ubuntu Software  (Tweaks)
+47) htop
+48) nmap
