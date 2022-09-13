@@ -131,3 +131,5 @@ shift + shift      поиск везде
 alt + Right        Перейти к следующей вкладке
 alt + Left         Перейти к предыдущей вкладке
 Ctrl + F12         Всплывающее окно структуры файла
+
+(Create Desktop Entry PhpStorm)

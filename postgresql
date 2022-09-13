@@ -1,15 +1,26 @@
 /var/log/postgresql/postgresql-12-main.log
 
 /etc/postgresql/12/main/postgresql.conf
-postgres=# SELECT pg_reload_conf();
 
-
-pg_config
 psql --version
-postgres --version
+
+
+
+
+
+
+
+
+
 
 sudo -u postgres psql
 \q             (exit)
+
+
+
+
+
+
 
 
 
@@ -21,31 +32,184 @@ psql
 \q             (exit)
 
 
+
+
+
+
+
+
+
+
 Показать список баз данных PostgreSQL:
 \l
-createdb ibank_ibank;
-dropdb   ibank_ibank;
 
-ALTER DATABASE имя RENAME TO новое_имя
-
-ALTER DATABASE database_ibank OWNER TO user_ibank;
 
 Переключится на другую базу:
 \c
 
 
 
+
+
+
+
+
+
+
+Создать баз данных:
+CREATE DATABASE database_ibank;
+
+
+
+
+
+
+
+
+
+
+Переименоват баз данных:
+ALTER DATABASE имя RENAME TO новое_имя
+
+
+
+
+
+
+
+
+
+
 Показать список пользователей (ролей):
 \du
-createuser ibank_ibank;
-dropuser   ibank_ibank;
-DROP ROLE ibank_ibank;
 
-В reset пароль, если вы забыли:
+
+
+
+
+
+
+
+
+
+Создание пользователя:
+CREATE USER user_ibank WITH PASSWORD 'password_ibank';
+
+
+
+
+
+
+
+
+
+Удалить юзера:
+DROP ROLE user_ibank;
+
+
+
+
+
+
+
+
+
+
+Переопределить пароль, если вы забыли:
 ALTER USER имя_роли WITH PASSWORD 'новый_пароль';
-\password
 
+
+
+
+
+
+
+
+
+Переименовать ползователя:
 ALTER USER user_name RENAME TO user_ibank;
+
+
+
+
+
+
+
+
+
+
+Определение права доступа к базу данных:
+GRANT ALL PRIVILEGES ON DATABASE "database_ibank" to user_ibank;
+
+ALTER USER user_ibank WITH SUPERUSER;
+
+\c database_ibank
+
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "user_ibank";
+
+
+
+
+
+
+
+
+
+
+
+Изменить права доступа к базу данных:
+ALTER DATABASE database_ibank OWNER TO user_ibank;
+
+
+
+
+
+
+
+
+
+
+#импорт данных в формате sql на базу данных database_ibank в PostgreSQL
+sudo -i -u postgres
+psql -d database_ibank < /home/bekzad/Downloads/PostgreSQL__ibank.sql
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Показать список таблиц:
 \dt
@@ -65,12 +229,6 @@ ALTER USER user_name RENAME TO user_ibank;
 \h
 
 
-
-
-pg_dump
-
-psql -U ibank_ibank -d ibank_ibank < /home/bekzad/Downloads/ibank_localhost-2022_01_26_07_55_57-dump.sql
-pg_restore -U username -d dbname -1 filename.dump
 
 
 

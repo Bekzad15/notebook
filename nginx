@@ -9,7 +9,6 @@ sudo ufw allow in 80/tcp
 
 
 sudo chmod -R 775 basic
-sudo chgrp -R www-data basic
 sudo chown -R www-data ./basic
 sudo chown -R www-data:www-data ./basic
 

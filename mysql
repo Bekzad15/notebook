@@ -104,7 +104,7 @@ SHOW COLUMNS FROM user;
 SELECT id FROM user;
 
 
-SOURCE /home/bekzad/Downloads/Telegram Desktop/MySQL___ibank_localhost.sql       # импорт базы данных
+SOURCE /home/bekzad/Downloads/MySQL___ibank_localhost.sql       # импорт базы данных
 
 
 
