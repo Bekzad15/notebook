@@ -53,9 +53,11 @@
 	 -Caffeine
 	 -Vitals
 	 -Clipboard Indicator
+	 -Desktop Icons
+	 -Battery Time
 	 
 25) sudo apt install flameshot
-26) sudo apt install copyq
+26) sudo apt install kazam
 
 27) touchpad-toggle
 
@@ -101,6 +103,40 @@
 47) Ubuntu Software  (Tweaks)
 48) htop
 49) nmap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
