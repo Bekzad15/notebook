@@ -54,7 +54,7 @@ CTRL+SHIFT+BACKSPACE     перейти к последнему отредакт
 
 
 CTRL+F                   Искать только в текущем файле или внутри каталог (find in file)
-CTRL+SHIFT+F             Искать произвольной области или всего проекта    (find in file)
+CTRL+SHIFT+F             Искать произвольной области или всего проекта    (find in everywhere)
 
 SHIFT+SHIFT              Искать все и везде   (find file)
 CTRL+N                   Искать класс         (find file)
