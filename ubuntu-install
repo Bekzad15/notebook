@@ -82,14 +82,15 @@
 39) DBeaver
 
 40) nginx  (losst)
-41) sudo apt -y install php7.4 php7.4-cli php7.4-fpm
-                        php7.4-curl php7.4-dom php7.4-gd php7.4-geoip php7.4-intl php7.4-soap php7.4-zip php7.4-mbstring php7.4-redis
+41) sudo apt -y install php7.2-fpm     (    sudo apt-get remove --purge php7*    ) 
+                        php7.2-curl php7.2-dom php7.2-gd php7.2-geoip php7.2-intl php7.2-soap php7.2-zip php7.2-mbstring 
+                        
+			php7.2-redis     (redis, igbinary)
+			php7.2-mysqlnd   (mysqlnd, mysqli, pdo_mysql)
+			php7.2-pgsql     (pgsql, pdo_pgsql)
+			php7.2-dom       (dom, SimpleXML, xml, xmlreader, xmlwriter, xsl)
 
-			php7.4-mysqlnd   (mysqlnd, mysqli)
-			php7.4-pgsql     (pgsql, pdo_pgsql)
-			php7.4-SimpleXML (SimpleXML, xml, xmlreader, xmlwriter, xsl)
-
-    sudo apt -y install php-mysql        (pdo_mysql)
+    
 
      
 42) Composer (losst)
@@ -148,7 +149,7 @@
 
 
 
-PHP7.4-FPM
+PHP7.2-FPM      IBANK.NBU.UZ
 
 [PHP Modules]
 calendar
@@ -158,7 +159,7 @@ curl
 date
 dom
 exif
-FFI
+FFI       (7.4)
 fileinfo
 filter
 ftp
@@ -210,3 +211,48 @@ zlib
 Zend OPcache
 
 
+
+
+
+
+
+
+
+
+PHP7.2-FPM    
+calendar
+Core
+ctype
+date
+exif
+fileinfo
+filter
+ftp
+gettext
+hash
+iconv
+json
+libxml
+openssl
+pcntl
+pcre
+PDO
+Phar
+posix
+readline
+Reflection
+session
+shmop
+sockets
+sodium
+SPL
+standard
+sysvmsg
+sysvsem
+sysvshm
+tokenizer
+Zend OPcache
+zlib
+
+[Zend Modules]
+Zend OPcache

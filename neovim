@@ -1,5 +1,5 @@
           VIM
-1) Normal mode     ctrl-[
+1) Normal mode     ESC       ctrl-[
 2) Insert mode     I,i,  A,a,  O,o,  S,s,  C,c,
 3) Command mode    :
 4) Visual mode     V,v

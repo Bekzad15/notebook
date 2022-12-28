@@ -35,3 +35,9 @@ PHP-GTK
 /var/log/php7.3-fpm.log             log php-fpm
 
 /usr/bin/php7.3
+
+
+
+
+
+sudo apt-get remove --purge php7*
