@@ -189,10 +189,11 @@ git branch -d <branch_name>
 git branch
 git branch -r
 git branch --all
+git branch -vv 
 
 git checkout <branch_name>
 
-git merge <branch_name>              (<master>    <-------   <branch_name>)
+git merge <branch_name>             (current branch master) (<master>    <-------   <branch_name>)
 
 
 
@@ -226,8 +227,11 @@ git commit --amend
 
 
 
-localda   (dev pull)  (master pull)
-localda   (git merge master)       dev_branch <---- master
-localda   (dev push)
-gitea     (merge   dev_branch -----> master)
+1) localda  (current branch dev_branch)         (git pull)  
+2) localda  (current branch master)             (git pull)
+3) localda  (current branch dev_branch)         (git merge master)                                         dev_branch <---- master
+4) localda  (current branch dev_branch)         (git branch -vv)                                           list of upstream branches 
+                                                (git push -u origin dev_branch)                            create upstream branch
+					        (git push)
+5) giteada  (current branch master)             (git merge dev_branch)                                     master     <---- dev_branch
 
