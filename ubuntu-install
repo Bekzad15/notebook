@@ -88,7 +88,7 @@
 			php7.2-redis     (redis, igbinary)
 			php7.2-mysqlnd   (mysqlnd, mysqli, pdo_mysql)
 			php7.2-pgsql     (pgsql, pdo_pgsql)
-			php7.2-dom       (dom, SimpleXML, xml, xmlreader, xmlwriter, xsl)
+			php7.2-dom       (dom, SimpleXML, wddx, xml, xmlreader, xmlwriter, xsl)
 
     
 
