@@ -1,33 +1,28 @@
-                                                    Состояния Git:
+git config --global --get http.proxy
+git config --global --get https.proxy
 
+git config --global http.proxy http://10.9.0.29:42897
+git config --global https.proxy http://10.9.0.29:42897
+
+                   
+Состояния Git:
 1) modified     (изменён)
-
 2) staged       (индексирован)
-
 3) committed    (зафиксирован)
  
 
-
-
 Untracked:
-
 Tracked:
-
--unmodified
-
--modified
-
--staged 
+  -unmodified
+  -modified
+  -staged 
 
 
 
 Базовый подход в работе с Git выглядит так:
-
 1) Изменяете файлы вашей рабочей копии.
-
 2) Выборочно добавляете в индекс только те изменения, которые должны попасть в следующий коммит,
    добавляя тем самым снимки только этих изменений в индекс.
-
 3) Когда вы делаете каммит, используются файлы из индекса как есть, и этот снимок сохраняется в ваш каталог Git.
 
 
@@ -184,12 +179,13 @@ git branch <new_branch_name>
 git checkout -b <new_branch_name>
 
 git branch -d <branch_name>
-
+git branch -D <branch_name>
+git push origin --delete <remote_branch_name>
+git remote prune origin
 
 git branch
 git branch -r
 git branch --all
-git branch -vv 
 
 git checkout <branch_name>
 
@@ -199,17 +195,9 @@ git merge <branch_name>             (current branch master) (<master>    <------
 
 
 
-
-
-
-
-
-
-
 git status
 git add <file_name>
 git commit -m "description of commit" 
-
 
 git restore <file_name>
 git checkout -- <file_name>
@@ -227,11 +215,4 @@ git commit --amend
 
 
 
-1) localda  (current branch dev_branch)         (git pull)  
-2) localda  (current branch master)             (git pull)
-3) localda  (current branch dev_branch)         (git merge master)                                         dev_branch <---- master
-4) localda  (current branch dev_branch)         (git branch -vv)                                           list of upstream branches 
-                                                (git push -u origin dev_branch)                            create upstream branch
-					        (git push)
-5) giteada  (current branch master)             (git merge dev_branch)                                     master     <---- dev_branch
 

@@ -1,3 +1,64 @@
+1) sudo apt install postgresql postgresql-contrib
+
+
+sudo -u postgres psql        (ubuntu parol)
+\q
+
+
+
+
+\l
+\du
+
+
+
+
+
+2) CREATE DATABASE database_ibank;
+
+3) CREATE USER user_ibank WITH PASSWORD 'password_ibank';
+
+4) GRANT ALL PRIVILEGES ON DATABASE "database_ibank" to user_ibank;
+   ALTER USER user_ibank WITH SUPERUSER;
+   \c database_ibank
+   GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "user_ibank";
+
+
+
+
+5)  #импорт данных в формате sql на базу данных database_ibank в PostgreSQL
+    sudo -i -u postgres
+    psql -d database_ibank < /home/bekzad/Downloads/PostgreSQL__ibank.sql
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /var/log/postgresql/postgresql-12-main.log
 
 /etc/postgresql/12/main/postgresql.conf
@@ -107,7 +168,7 @@ CREATE USER user_ibank WITH PASSWORD 'password_ibank';
 DROP ROLE user_ibank;
 
 
-
+DROP DATABASE database_ibank;
 
 
 

@@ -1,3 +1,134 @@
+sudo mysql              (slrp3749)                      unix_socket
+mysql -u root -p        (password_root)                 password
+exit
+
+
+
+
+
+
+
+SHOW DATABASES;
+SELECT user FROM mysql.user;
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+SELECT db,host,user FROM mysql.db;
+SHOW GRANTS FOR 'user_ibank'@'localhost';
+
+
+
+
+
+
+
+
+1) sudo apt install mysql-server
+2) sudo mysql_secure_installation
+    1.   Откройте новую терминальное приложение.
+    2.   sudo killall -9 mysql_secure_installation
+    3.   sudo mysql
+    4.   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_root';
+    5.   exit
+    6.   sudo mysql_secure_installation
+    7.   password_root
+    8.   No (VALIDATE PASSWORD COMPONENT)
+    9.   No (Change the password for root ?)
+    10.  y    (Remove anonymous users?)
+    11.  y    (Disallow root login remotely?)
+    12.  y    (Remove test database and access to it?)
+    13.  y    (Reload privilege tables now?)
+
+
+
+
+
+
+
+1)  mysql -u root -p      (password_root)
+2)  CREATE DATABASE database_ibank;
+3)  CREATE USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
+4)  GRANT ALL ON database_ibank.* TO 'user_ibank'@'localhost';
+5)  FLUSH PRIVILEGES;
+
+
+
+
+1) Migration
+2) mysql -u root -p      (password_root)
+3) USE database_ibank;
+4) SOURCE /home/bekzad/Downloads/MySQL_ibank_localhost-dump.sql       # импорт базы данных
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
+ALTER USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
+
+GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost';
+GRANT ALL PRIVILEGES ON database_name.table_name  TO 'username'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
+
+
+
+
+
+
+
+
+
+SHOW DATABASES;
+USE [db name];
+SHOW TABLES;
+DROP DATABASE [db name];
+DROP USER 'ibank_user'@'localhost';
+
+
+
+
+
+
+
+SELECT VERSION();
+SHOW PRIVILEGES;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Библиотеки:
 
 libmysql (Oracle)
@@ -13,234 +144,5 @@ PDO
  -pdo_pgsql
  
 
-
-
-
-
-
-
-
-/etc/mysql/  my.cnf
-
-/var/lib/mysql/
-
-/var/log/mysql/
-
-/var/run/mysqld/mysqld.sock
-
-/var/run/mysqld/mysqld.pid
-
-/usr/share/ mysql/
-            mysql-common/
-	    php7.3-mysql/
-
-
-
-
-
-docker MySQL
-
-MYSQL_ROOT_PASSWORD=112233
-MYSQL_DATABASE=db
-MYSQL_USER=atlogex
-MYSQL_PASSWORD=123456
-
-
-
-
-
 mysql -V
-
 sudo systemctl status mysql
-
-
-
-
-
-
-
-CONSOLE COMMAND MySQL:
-
-
-
-sudo mysql
-mysql -u имя_пользователя -p
-
-EXIT
-
-SHOW STATUS;
-
-
-SHOW DATABASES;
-USE [db name];
-
-CREATE DATABASE название_базы_данных;   (ibank_database)
-DROP DATABASE имя_базы_даных
-
-Переименовать базу данных
-mysqldump -u root -p old_db > old_db.sql
-mysqladmin -u root -p create new_db
-mysql -u root -p new_db < old_db.sql
-
-
-
-ALTER USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
-
-
-
-Вывести список пользователей:
-SELECT user FROM mysql.user;
-
-CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
-GRANT ALL PRIVILEGES ON database_ibank.* TO 'user_ibank'@'localhost';
-
-DROP USER 'ibank_user'@'localhost';
-
-
-
-SHOW TABLES;
-
-SHOW COLUMNS FROM user;
-SELECT id FROM user;
-
-
-SOURCE /home/bekzad/Downloads/MySQL___ibank_localhost.sql       # импорт базы данных
-
-
-
-# просмотрите метод аутентификации для каждого из ваших пользователей MySQL с помощью следующей команды:
-SELECT user,authentication_string,plugin,host FROM mysql.user;
-
-# Для изменения этой настройки
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
-
-# применит внесённые изменения
-FLUSH PRIVILEGES;
-
-
-
-
-
-
-
-
-
-
-
-SHOW CREATE TABLE user;
-SHOW INDEX FROM user;
-
-
-
-DESCRIBE [table name];
-
-
-CREATE TABLE название_таблицы(
-название_столбца ПАРАМЕТР,
-название_столбца ПАРАМЕТР,
-название_столбца ПАРАМЕТР
-);
-
-Вот небольшой список часто используемых параметров:
-
-AUTO_INCREMENT — автоматически нумеровать каждую новую запись. Можно сделать отдельный столбец с нумерацией строк в таблице;
-CHAR — можно использовать только символы;
-INT — можно использовать только целые числа;
-NOT NULL — поле не должно быть пустым;
-PRIMARY KEY — в каждой строке должны быть только уникальные значения
-
-PRIMARY KEY (название_столбца, название_столбца, название_столбца)
-
-CREATE TABLE books( 
-id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-title CHAR(100) NOT NULL,
-author CHAR(40) NOT NULL,
-price INT NOT NULL
-);
-
-
-
-INSERT INTO название_таблицы (название_столбца1, название_столбца2, название_столбца3) VALUES (“значение1“, “значение2“, “значение3“);
-
-INSERT INTO books (title,author,price) VALUES("Green Mile","Stephen King","17");
-
-
-
-UPDATE название_таблицы SET название_столбца = “новое_значение” WHERE название_столбца = “значение“;
-
-UPDATE books SET title = "The Casual Vacancy" WHERE id = "2";
-
-
-
-DELETE FROM название_таблицы WHERE название_столбца = “значение_столбца“;
-
-DELETE FROM books WHERE id = "2";
-
-
-
-TRUNCATE TABLE название_таблицы;
-
-
-
-DROP TABLE название_таблицы;
-
-DROP DATABASE название_базы_данных;
-
-
-
-SHOW COLUMNS FROM user;
-SELECT id FROM user;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-my.cnf:
-
-
-[client]
-port                        = 3306
-socket                      = /var/run/mysqld/mysqld.sock
-
-[mysqld_safe]
-socket                      = /var/run/mysqld/mysqld.sock
-nice                        = 0
-
-[mysqld]
-user                        = mysql
-pid-file                    = /var/run/mysqld/mysqld.pid
-socket                      = /var/run/mysqld/mysqld.sock
-port                        = 3306
-basedir                     = /usr
-datadir                     = /var/lib/mysql
-tmpdir                      = /tmp
-language                    = /usr/share/mysql/english
-old_passwords               = 0
-bind-address                = 127.0.0.1
-skip-external-locking
-max_allowed_packet          = 16M
-key_buffer_size             = 16M
-innodb_buffer_pool_size     = 4096M
-innodb_file_per_table       = 1
-innodb_flush_method         = O_DIRECT
-innodb_flush_log_at_trx_commit  = 0
-max_connections             = 160
-        query_cache_size            = 0
-slow_query_log              = /var/log/mysql/mysql-slow.log
-long_query_time             = 1
-expire_logs_days            = 10
-max_binlog_size             = 100M
-[mysqldump]
-quick
-quote-names
-max_allowed_packet          = 16M
-

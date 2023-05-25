@@ -82,7 +82,7 @@
 39) DBeaver
 
 40) nginx  (losst)
-41) sudo apt -y install php7.2-fpm     (    sudo apt-get remove --purge php7*    ) 
+41) sudo apt -y install php7.2-fpm     (    sudo apt remove --purge php7*    ) 
                         php7.2-curl php7.2-dom php7.2-gd php7.2-geoip php7.2-intl php7.2-soap php7.2-zip php7.2-mbstring 
                         
 			php7.2-redis     (redis, igbinary)
