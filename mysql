@@ -16,7 +16,7 @@ SHOW GRANTS FOR 'user_ibank'@'localhost';
 
 
 
-1) sudo apt install mysql-server
+1) sudo apt install mariadb-server
 2) sudo mysql_secure_installation
     1.   Откройте новую терминальное приложение.
     2.   sudo killall -9 mysql_secure_installation
