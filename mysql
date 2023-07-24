@@ -18,19 +18,10 @@ SHOW GRANTS FOR 'user_ibank'@'localhost';
 
 1) sudo apt install mariadb-server
 2) sudo mysql_secure_installation
-    1.   Откройте новую терминальное приложение.
-    2.   sudo killall -9 mysql_secure_installation
-    3.   sudo mysql
-    4.   ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_root';
-    5.   exit
-    6.   sudo mysql_secure_installation
-    7.   password_root
-    8.   No (VALIDATE PASSWORD COMPONENT)
-    9.   No (Change the password for root ?)
-    10.  y    (Remove anonymous users?)
-    11.  y    (Disallow root login remotely?)
-    12.  y    (Remove test database and access to it?)
-    13.  y    (Reload privilege tables now?)
+    1.   ENTER
+    2.   N ENTER
+    3.   Далее на все вопросы вы можете использовать клавиши Y и ENTER
+
 
 
 
