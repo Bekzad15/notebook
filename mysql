@@ -27,85 +27,12 @@ SHOW GRANTS FOR 'user_ibank'@'localhost';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
-ALTER USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
-
-GRANT ALL PRIVILEGES ON database_name.* TO 'username'@'localhost';
-GRANT ALL PRIVILEGES ON database_name.table_name  TO 'username'@'%';
-GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
-
-
-
-
-
-
-
-
-
-SHOW DATABASES;
-USE [db name];
-SHOW TABLES;
-DROP DATABASE [db name];
-DROP USER 'ibank_user'@'localhost';
-
-
-
-
-
-
-
-SELECT VERSION();
-SHOW PRIVILEGES;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Библиотеки:
-
-libmysql (Oracle)
-mysqlnd  (PHP)    default
-
-
+  libmysql (Oracle)
+  mysqlnd  (PHP)    default
 Расширения:
-
-mysql
-mysqli
-PDO
- -pdo_mysql
- -pdo_pgsql
- 
-
-mysql -V
-sudo systemctl status mysql
+  mysql
+  mysqli
+  PDO
+   -pdo_mysql
+   -pdo_pgsql
