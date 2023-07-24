@@ -1,16 +1,11 @@
-sudo mysql              (slrp3749)                      unix_socket
-mysql -u root -p        (password_root)                 password
+sudo mariadb              (linux parol)
 exit
-
-
-
-
-
 
 
 SHOW DATABASES;
 SELECT user FROM mysql.user;
 SELECT user,authentication_string,plugin,host FROM mysql.user;
+
 SELECT db,host,user FROM mysql.db;
 SHOW GRANTS FOR 'user_ibank'@'localhost';
 
