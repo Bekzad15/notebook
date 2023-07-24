@@ -1,39 +1,24 @@
 sudo mariadb              (linux parol)
 exit
 
-
 SHOW DATABASES;
 SELECT user FROM mysql.user;
 SELECT user,authentication_string,plugin,host FROM mysql.user;
-
 SELECT db,host,user FROM mysql.db;
 SHOW GRANTS FOR 'user_ibank'@'localhost';
-
-
-
-
-
-
-
 
 1) sudo apt install mariadb-server
 2) sudo mysql_secure_installation
     1.   ENTER
     2.   N ENTER
     3.   Далее на все вопросы вы можете использовать клавиши Y и ENTER
-
-
-
-
-
-
-
-
-1)  mysql -u root -p      (password_root)
-2)  CREATE DATABASE database_ibank;
-3)  CREATE USER 'user_ibank'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password_ibank';
-4)  GRANT ALL ON database_ibank.* TO 'user_ibank'@'localhost';
+3)  CREATE DATABASE database_ibank;
+4)  CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
+5)  GRANT ALL ON database_ibank.* TO 'user_ibank'@'localhost';
 5)  FLUSH PRIVILEGES;
+
+
+
 
 
 
