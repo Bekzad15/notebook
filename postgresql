@@ -1,18 +1,10 @@
 1) sudo apt install postgresql postgresql-contrib
 
-
-sudo -u postgres psql        (ubuntu parol)
+sudo -u postgres psql        (linux parol)
 \q
-
-
-
 
 \l
 \du
-
-
-
-
 
 2) CREATE DATABASE database_ibank;
 
@@ -23,68 +15,14 @@ sudo -u postgres psql        (ubuntu parol)
    \c database_ibank
    GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "user_ibank";
 
-
-
-
 5)  #импорт данных в формате sql на базу данных database_ibank в PostgreSQL
     sudo -i -u postgres
     psql -d database_ibank < /home/bekzad/Downloads/PostgreSQL__ibank.sql
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/var/log/postgresql/postgresql-12-main.log
-
-/etc/postgresql/12/main/postgresql.conf
-
-psql --version
-
-
-
-
-
-
-
-
-
-
 sudo -u postgres psql
 \q             (exit)
-
-
-
-
-
-
-
-
-
 
 sudo -i -u postgres
 su bekzad
@@ -95,247 +33,24 @@ psql
 
 
 
-
-
-
-
-
-
-Показать список баз данных PostgreSQL:
-\l
-
-
-Переключится на другую базу:
-\c
-
-
-
-
-
-
-
-
-
-
-Создать баз данных:
-CREATE DATABASE database_ibank;
-
-
-
-
-
-
-
-
-
-
-Переименоват баз данных:
-ALTER DATABASE имя RENAME TO новое_имя
-
-
-
-
-
-
-
-
-
-
-Показать список пользователей (ролей):
-\du
-
-
-
-
-
-
-
-
-
-
-Создание пользователя:
-CREATE USER user_ibank WITH PASSWORD 'password_ibank';
-
-
-
-
-
-
-
-
-
-Удалить юзера:
-DROP ROLE user_ibank;
-
-
-DROP DATABASE database_ibank;
-
-
-
-
-
-
-
-Переопределить пароль, если вы забыли:
-ALTER USER имя_роли WITH PASSWORD 'новый_пароль';
-
-
-
-
-
-
-
-
-
-Переименовать ползователя:
-ALTER USER user_name RENAME TO user_ibank;
-
-
-
-
-
-
-
-
-
-
-Определение права доступа к базу данных:
-GRANT ALL PRIVILEGES ON DATABASE "database_ibank" to user_ibank;
-
-ALTER USER user_ibank WITH SUPERUSER;
-
-\c database_ibank
-
-GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO "user_ibank";
-
-
-
-
-
-
-
-
-
-
-
-Изменить права доступа к базу данных:
-ALTER DATABASE database_ibank OWNER TO user_ibank;
-
-
-
-
-
-
-
-
-
+\l                                                                  //Показать список баз данных PostgreSQL
+\c                                                                  //Переключится на другую базу
+CREATE DATABASE database_ibank;                                     //Создать баз данных:
+ALTER DATABASE имя RENAME TO новое_имя                              //Переименоват баз данных
+\du                                                                 //Показать список пользователей (ролей)
+CREATE USER user_ibank WITH PASSWORD 'password_ibank';              //Создание пользователя
+DROP ROLE user_ibank;                                               //Удалить юзера
+DROP DATABASE database_ibank;                                       //Удалить базу
+ALTER USER имя_роли WITH PASSWORD 'новый_пароль';                   //Переопределить пароль, если вы забыли
+ALTER USER user_name RENAME TO user_ibank;                          //Переименовать ползователя
+GRANT ALL PRIVILEGES ON DATABASE "database_ibank" to user_ibank;    //Определение права доступа к базу данных
+\dt                                                                 //Показать список таблиц
+\d table_name                                                       //Посмотреть, какие столбцы определены в таблице:
+ALTER DATABASE database_ibank OWNER TO user_ibank;                  //Изменить права доступа к базу данных
 
 #импорт данных в формате sql на базу данных database_ibank в PostgreSQL
 sudo -i -u postgres
 psql -d database_ibank < /home/bekzad/Downloads/PostgreSQL__ibank.sql
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Показать список таблиц:
-\dt
-
-Посмотреть, какие столбцы определены в таблице:
-\d table_name
-
-
-
-
-
-
-Справка:
-\?
-\help
-\conninfo
-\h
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-test=# CREATE TABLE table_name (
-       column_name1 col_type (field_length) column_constraints,
-       column_name2 col_type (field_length),
-       column_name3 col_type (field_length)
-       );
-
-
-test=# CREATE TABLE courses(
-       c_no text PRIMARY KEY,
-       title text,
-       hours integer
-       );
-
-
-test=# INSERT INTO courses(c_no, title, hours)
-       VALUES ('CS301', 'Базы данных', 30),
-              ('CS305', 'Сети ЭВМ', 60);
-
-
-test=# SELECT * FROM courses;
-
-test=# UPDATE courses
-       SET hours = hours * 2
-       WHERE c_no = 'CS301';
-
-test=# DELETE FROM exams WHERE score < 5;
-
-
-
-
-
-
 
 
 
