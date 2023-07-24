@@ -15,18 +15,10 @@ SHOW GRANTS FOR 'user_ibank'@'localhost';
 3)  CREATE DATABASE database_ibank;
 4)  CREATE USER 'user_ibank'@'localhost' IDENTIFIED BY 'password_ibank';
 5)  GRANT ALL ON database_ibank.* TO 'user_ibank'@'localhost';
-5)  FLUSH PRIVILEGES;
+6)  FLUSH PRIVILEGES;
 
-
-
-
-
-
-
-1) Migration
-2) mysql -u root -p      (password_root)
-3) USE database_ibank;
-4) SOURCE /home/bekzad/Downloads/MySQL_ibank_localhost-dump.sql       # импорт базы данных
+7) USE database_ibank;
+8) SOURCE /home/bekzad/Downloads/mariadb_database_name-dump.sql       # импорт базы данных
 
 
 
