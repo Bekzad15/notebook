@@ -1,5 +1,3 @@
-sudo apt install mariadb-server
-
 sudo mariadb              (linux parol)
 exit
 
