@@ -1,8 +1,84 @@
-1) Kerio control vpn   
-2) Telegram
-3) Swapfile 10 G
-4) ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"
-5) sudo apt install git
+Swapfile 10G             (Linux)
+touchpad-toggle          (script)
+ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"   (command)
+git                      (apt)
+
+Blue Recorder            (snap)
+Ksnip                    (snap)
+Caffeine Indicator       (snap)
+CopyQ                    (snap)
+
+neovim                   (apt)
+sudo update-alternatives --config editor            (command)
+htop                     (apt)
+netstat                  (apt)
+ubuntu-restricted-extras (apt)
+
+Telegram                 (snap)
+Zoom                     (snap)
+Chrome                   (.deb)
+Yandex                   (.deb)
+
+PhpStorm                 (snap)
+DBeaver                  (snap)
+Insomnia                 (snap)
+Sublime Merge            (snap)
+Sublime Text             (snap)
+
+MariaDB                  (apt)
+PostgreSQL               (apt)
+Redis                    (apt)
+RabbitMQ                 (apt)
+Docker                   (apt)
+
+Nginx                    (apt)
+Cron                     (apt)
+Supervisor               (apt)
+PHP                      (apt)
+Composer                 (apt)
+Node Version Manage      (apt)
+
+
+Kerio control vpn
+
+
+sudo apt remove --purge php7*
+
+sudo apt -y install php7.2-fpm
+     
+                        php7.2-curl
+                        php7.2-dom
+                        php7.2-gd
+                        php7.2-geoip 
+                        php7.2-intl 
+                        php7.2-soap 
+                        php7.2-zip 
+                        php7.2-mbstring 
+     
+			 php7.2-redis     (redis, igbinary)
+			 php7.2-mysqlnd   (mysqlnd, mysqli, pdo_mysql)
+			 php7.2-pgsql     (pgsql, pdo_pgsql)
+			 php7.2-dom       (dom, SimpleXML, wddx, xml, xmlreader, xmlwriter, xsl)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -30,93 +106,33 @@
 3) Software Updater  
 4) sudo apt update && sudo apt upgrade
 5) sudo snap refresh
-6) sudo apt install telegram-desktop
-7) Thunderbird (sign in) 
-8) Firefox     (sign in)
+
 9) Setting
       -Onine Accounts
           -Ubuntu 
 	  -Google 
 	  -Microsoft
 
-10)  sudo apt install git
-11) ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"
-12) eval "$(ssh-agent -s)"
-13) ssh-add ~/.ssh/id_rsa
 
-14) sudo apt install neovim
-15) sudo update-alternatives --config editor
-16) sudo apt install tmux
-17) sudo apt install curl
-18) sudo apt install xsel
 
-19) ~/.bashrc
-    ~/.tmux.conf
-    ~/.config/nvim/init.vim
-20) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 
-21) swap
-22) hibernate
 
-23) sudo apt install chrome-gnome-shell
-24) extensions.gnome.org
-         -Extensions
-	 -Caffeine
-	 -Vitals
-	 -Clipboard Indicator
-	 -Desktop Icons
-	 -Battery Time
+
+
+
 	 
-25) sudo apt install kolourpaint
-26) sudo apt install kazam
-
-27) touchpad-toggle
-
-    echo $PATH
-    export PATH=$PATH:/home/bekzad/Public/scripts
-
-28) sudo apt install ubuntu-restricted-extras
-29) sudo apt install apt-transport-https
-
-30) Chrome 
-31) Yandex 
-32) Zoom
-33) Slack
 
 
-34) sudo apt install -y docker-ce
-35) curl docker-compose 
 
-36) PhpStorm 
-37) sudo apt install insomnia
-38) sudo apt install sublime-merge 
-39) DBeaver
 
-40) nginx  (losst)
-41) sudo apt -y install php7.2-fpm     (    sudo apt remove --purge php7*    ) 
-                        php7.2-curl php7.2-dom php7.2-gd php7.2-geoip php7.2-intl php7.2-soap php7.2-zip php7.2-mbstring 
-                        
-			php7.2-redis     (redis, igbinary)
-			php7.2-mysqlnd   (mysqlnd, mysqli, pdo_mysql)
-			php7.2-pgsql     (pgsql, pdo_pgsql)
-			php7.2-dom       (dom, SimpleXML, wddx, xml, xmlreader, xmlwriter, xsl)
 
-    
+
+
+
+
+
 
      
-42) Composer (losst)
-
-43) sudo apt install mysql-server
-44) sudo apt install postgresql
-45) sudo apt install redis-server
-
-46) Kerio VPN Client 9.2.7-2921 for Linux AMD64
-
-47) Ubuntu Software  (Tweaks)
-48) htop
-49) nmap
-
-50) vscode
 
 
 
