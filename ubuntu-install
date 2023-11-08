@@ -1,4 +1,11 @@
 Swapfile 10G             (Linux)
+1) swapon --show
+2) sudo swapoff /swapfile
+3) sudo fallocate -l 10G /swapfile
+4) sudo mkswap /swapfile
+5) sudo swapon /swapfile
+6) free -h
+
 touchpad-toggle          (script)
 ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"   (command)
 git                      (apt)
