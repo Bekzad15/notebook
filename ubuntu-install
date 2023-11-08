@@ -10,8 +10,8 @@ touchpad-toggle          (script)
 ssh-keygen -t rsa -C "yangibaevbekzad@gmail.com"   (command)
 git                      (apt)
 
-Blue Recorder            (snap)
-Ksnip                    (snap)
+
+Flameshot                (snap)
 Caffeine Indicator       (snap)
 CopyQ                    (snap)
 
